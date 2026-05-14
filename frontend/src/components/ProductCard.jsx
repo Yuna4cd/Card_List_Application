@@ -10,14 +10,18 @@ import {
   Typography,
 } from '@mui/material'
 
-function ProductCard({ product, deleting, onDelete }) {
+function ProductCard({ product, deleting, onDelete, index }) {
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
   }).format(product.price)
 
   return (
-    <Card className="product-card" variant="outlined">
+    <Card
+      className="product-card"
+      style={{ '--appear-delay': `${index * 70}ms` }}
+      variant="outlined"
+    >
       <CardMedia
         component="img"
         height="190"

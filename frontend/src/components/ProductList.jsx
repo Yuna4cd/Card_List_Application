@@ -89,9 +89,10 @@ function ProductList() {
 
       {products.length > 0 ? (
         <Box className="product-grid">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <ProductCard
               deleting={deletingId === product.id}
+              index={index}
               key={product.id}
               onDelete={handleDelete}
               product={product}
