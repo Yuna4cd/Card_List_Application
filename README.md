@@ -15,6 +15,11 @@ Card_List_Application/
 |
 +-- frontend/
 |   +-- src/
+|   |   +-- api/
+|   |   |   +-- products.js
+|   |   +-- components/
+|   |   |   +-- ProductCard.jsx
+|   |   |   +-- ProductList.jsx
 |   |   +-- App.jsx
 |   |   +-- main.jsx
 |   +-- package.json
@@ -117,4 +122,4 @@ npm run preview
 
 - Product data is stored in memory from `backend/data/products.js`.
 - Deleted products are reset when the backend server restarts.
-- The frontend project currently contains the Vite React scaffold and can be extended to consume the backend routes.
+- The frontend consumes the backend routes through `frontend/src/api/products.js`.
